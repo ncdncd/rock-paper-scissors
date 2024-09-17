@@ -76,3 +76,5 @@ console.log(`${winner} Win! human:${humanScore} computer:${computerScore} total 
 }
 
 playGame(5)
+
+//not case insensitive yet for rock paper scissors input
