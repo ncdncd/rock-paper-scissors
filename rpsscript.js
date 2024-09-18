@@ -26,13 +26,13 @@ function getHumanChoice() {
     humanInput = prompt("enter rock, paper, or scissors");
   } while (
     !(
-      humanInput.localeCompare("rock") == 0 ||
-      humanInput.localeCompare("paper") == 0 ||
-      humanInput.localeCompare("scissors") == 0
+      humanInput.localeCompare("rock", "en", {sensitivity: "base"}) == 0 ||
+      humanInput.localeCompare("paper", "en", {sensitivity: "base"}) == 0 ||
+      humanInput.localeCompare("scissors", "en", {sensitivity: "base"}) == 0
     )
   );
 
-  return humanInput;
+  return humanInput.toLowerCase();
 }
 
 function playRound(huma, comp) {
@@ -76,5 +76,3 @@ console.log(`${winner} Win! human:${humanScore} computer:${computerScore} total 
 }
 
 playGame(5)
-
-//not case insensitive yet for rock paper scissors input
